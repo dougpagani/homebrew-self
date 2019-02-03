@@ -7,6 +7,9 @@ https://docs.brew.sh/How-to-Create-and-Maintain-a-Tap
 # Contents of cmd/
 These are "external" commands, as documented here: [LINK](https://docs.brew.sh/External-Commands)
 - They can be any kind of program, so long as there is a valid she-bang line.
+- They must be chmod-executable
+- They must be of pattern: `./cmd/brew-CMD`, \
+... to invoke via: `brew CMD`
 
 # Setup & Install
 
