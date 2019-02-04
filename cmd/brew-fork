@@ -1,0 +1,20 @@
+#!/bin/bash
+# Description: automate a common workflow of forking for a small edit
+# Caveat: should be used in concert w/ a util that synchs-up the fork
+# ... with the upstream, since losing out on valuable updates is bad.
+# Related utilities:
+#   - hub-pull-request
+#   - 
+# Common Workflow:
+#   1. get the formula's location
+#   2. clone it into the homebrew directory
+#   3. link it to a convenient dir
+#   4*. add a commit to self tap
+# 
+# * will need a configurable variable to avoid hard-coding this, though it could
+# ... make assumptions of being <this-git-user>/homebrew-self
+# 
+# - Deviation: if the FOSS project to-fork doesnt have a tap on homebrew-core yet
+# - Probably brew-unpack has some good direction for this
+################################################################################
+

@@ -1,0 +1,51 @@
+#!/bin/bash
+# Description: make an "editable" install
+# Caveat: will vary from src-lang to src-lang
+########################################################
+#{{{ Resources:
+
+# e.g. "npm link"
+# https://medium.com/dailyjs/how-to-use-npm-link-7375b6219557
+# ... symlink current directory in npm-location
+
+# e.g. "pip install -e", "python ./setup.py develop" 
+# https://stackoverflow.com/questions/30306099/pip-install-editable-vs-python-setup-py-develop
+
+# Especially when you want to submit a PR:
+# e.g. "yarn link, yarn upgrade"
+# change the package.json dependency
+# https://medium.com/@chrisdmasters/how-to-fork-a-dependency-and-use-it-locally-in-a-project-707c80d3449c
+
+# YARN DEPENDENCY LINKING:
+# hub fork <external-vendor>/<dep-repo-name>
+# cd <forked-repo-dir>
+# yarn link # linking the fork to your global pacman
+# yarn install # install the fork's deps
+# cd <consumer/parent/dependent-project>
+# yarn link "<forked-repo-name>" # linking the dependency in node_modules/<forked-repo-name> to that fork
+# # package.json wont change, so check that in node_modules/ the dir is a symlink
+# # ..... <DEV WORK>
+# Submitting the PR:
+# cd <forked-repo-dir>
+# git checkout -b some-branch-you-will-PR-from
+# git add/commit/push origin 
+# # Template PR invocation:
+# hub pull-request <-m/-F/-i message-entity> -b <[owner/repo:]branch> -h <[owner/repo:]branch>
+# # Example:
+# hub pull-request -m "Add os-relevant dependency checks" -b vendor/repo:master -h dougpagani/repo:master
+
+# GitHub PR documentation:
+# https://help.github.com/articles/creating-a-pull-request-from-a-fork/
+
+#}}} END
+#{{{ Desires:
+# - want to be in a local repo, and link it
+# - want to pull the source from the "right spot", and pull it
+# - unify ~/Downloads/git-repos & /usr/local/... levels of organization
+# * maybe will need to have multiple levels of organization
+# General workflow w/o brew:
+#   - git clone
+#   - (if non-interpretable langs) make, make install
+#   - link -s ...
+
+#}}} END
