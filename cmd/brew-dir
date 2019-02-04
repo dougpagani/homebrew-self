@@ -1,0 +1,11 @@
+#!/bin/bash
+# Description: print the dir 
+# ... re-implementation of brew --prefix <formula>, 
+# ... but a bit faster with an assumption.
+################################################################################
+
+echo "NOT YET IMPLEMENTED"
+
+# Dev Plan:
+# 0. check if it is a formula
+# 1. use /usr/local/opt/$formula
