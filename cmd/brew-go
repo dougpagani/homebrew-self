@@ -1,0 +1,5 @@
+#!/bin/bash
+# Description: print-out the path to be able to plonk into a brew-installed source-directory
+# - prints it to screen, for copy-pasting into an rc file
+# - checks if valid
+# - correctly configures (faster) auto-completion

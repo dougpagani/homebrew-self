@@ -154,3 +154,7 @@ https://formulae.brew.sh/formula/pcre
 
 - Seems to be some stuff for, for-example, brew-fork
 https://docs.brew.sh/How-To-Open-a-Homebrew-Pull-Request
+
+- gitbatch, buggy for go
+https://www.reddit.com/r/github/comments/aijs78/gitbatch_manage_multiple_git_repositories_in_one/
+https://asciinema.org/a/lxoZT6Z8fSliIEebWSPVIY8ct
