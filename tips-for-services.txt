@@ -1,0 +1,4 @@
+Examples:
+
+/usr/local/Cellar/sleepwatcher/2.2/de.bernhard-baehr.sleepwatcher-20compatibility-localuser.plist
+/usr/local/Cellar/nginx/1.21.1/homebrew.mxcl.nginx.plist
