@@ -3,3 +3,4 @@
 # - prints it to screen, for copy-pasting into an rc file
 # - checks if valid
 # - correctly configures (faster) auto-completion
+echo go!
