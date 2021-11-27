@@ -23,3 +23,6 @@ https://jonathanchang.org/blog/updating-homebrew-formulae-when-your-software-get
 
 - can build from a file directly (inside of a tap-project):
 brew install --build-from-source ./foo.rb
+
+- how to build your own verson (this is very involved, so only worth it later):
+https://jonathanchang.org/blog/maintain-your-own-homebrew-repository-with-binary-bottles/
