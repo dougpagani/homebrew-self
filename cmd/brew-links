@@ -1,2 +1,10 @@
 #!/bin/bash
 # Description: Print links, summarize if it is longer than the screen-size
+
+# ls -l for more info
+brew unlink coreutils --dry-run | xargs ls -l
+# or if NOT already linked
+# brew link coreutils --dry-run | xargs ls -l
+brew ls
+
+https://stackoverflow.com/questions/19915683/how-to-find-package-for-installed-file-in-brew
