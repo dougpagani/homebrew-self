@@ -32,6 +32,13 @@ class DiskutilCompletion < Formula
     #
     # The installed folder is not in the path, so use the entire path to any
     # executables being tested: `system "#{bin}/program", "do", "something"`.
-    system "true"
+    def completion_results
+      <<~EOS
+list info unmount unmountDisk eject mount mountDisk rename enableJournal disableJournal verifyVolume repairVolume verifyPermissions repairPermissions eraseVolume eraseOptical zeroDisk randomDisk secureErase partitionDisk resizeVolume splitPartition mergePartition
+      EOS
+    end
+    # completion_results = "list info unmount unmountDisk eject mount mountDisk rename enableJournal disableJournal verifyVolume repairVolume verifyPermissions repairPermissions eraseVolume eraseOptical zeroDisk randomDisk secureErase partitionDisk resizeVolume splitPartition mergePartition"
+
+    assert_equal(completion_results.strip, shell_output("COMP_WORDS='diskutil' COMP_CWORD='1' #{bin}/complete_diskutil.py").strip)
   end
 end
