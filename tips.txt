@@ -20,3 +20,6 @@
   * good tips for all this:
 https://jonathanchang.org/blog/updating-homebrew-formulae-when-your-software-gets-a-new-version/
 - brew-install-dev is a good installer for developing of formulae
+
+- can build from a file directly (inside of a tap-project):
+brew install --build-from-source ./foo.rb
