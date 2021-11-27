@@ -1,0 +1,22 @@
+- brew-formulae
+  - ag assert -- see what kind of asserts they use
+  - vimp z* just see some formulae for ideas
+- brew install --build-from-source ./some-local-path
+- brew --repo user/TAP -- how you get the directory of your personal tap
+
+- variables can be def/EOS, or just a normal =-assignment expression
+- brew-kegs to get to the .../Cellar
+- brew-go for a nice hello-world -- obviously, it could be made to work
+
+- To update a version:
+  - make the change
+  - tag the source/push the tag
+  - grab the url for the new tag
+  - run brew bump-formula-pr FORMULA and it will be updated with the new url
+  - TEST:
+    - brew install -vsd --git FORMULA 
+      - verbose, grab sources, debug on build-breakage by entering into the dir, and make it git-changeable
+
+  * good tips for all this:
+https://jonathanchang.org/blog/updating-homebrew-formulae-when-your-software-gets-a-new-version/
+- brew-install-dev is a good installer for developing of formulae
